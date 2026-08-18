@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background: #050207;
+    color: #f8f1fa;
+
+    font-family: "Inter", sans-serif;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 50% 20%, rgba(155,90,180,.22), transparent 35%),
+        radial-gradient(circle at 10% 80%, rgba(213,140,174,.12), transparent 30%),
+        #050207;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.hearts span {
+    position: absolute;
+    bottom: -40px;
+
+    color: rgba(213,140,174,.25);
+    font-size: 25px;
+
+    animation: float 12s linear infinite;
+}
+
+.hearts span:nth-child(1) { left: 10%; }
+.hearts span:nth-child(2) { left: 30%; animation-delay: 3s; }
+.hearts span:nth-child(3) { left: 50%; animation-delay: 6s; }
+.hearts span:nth-child(4) { left: 75%; animation-delay: 2s; }
+.hearts span:nth-child(5) { left: 90%; animation-delay: 8s; }
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .5;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+header {
+    width: min(1100px, 92%);
+    margin: auto;
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #9b909d;
+    text-decoration: none;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    border: 1px solid rgba(213,140,174,.25);
+    padding: 11px 17px;
+
+    transition: .3s;
+}
+
+header a:hover {
+    color: #f2c5d9;
+    border-color: #d58cae;
+}
+
+header span {
+    color: #756c78;
+    font-size: 8px;
+    letter-spacing: 5px;
+}
+
+header b {
+    font-size: 25px;
+    opacity: .6;
+}
+
+main {
+    width: min(900px, 92%);
+    margin: auto;
+    text-align: center;
+
+    padding: 70px 0 100px;
+}
+
+.eyebrow {
+    color: #d58cae;
+    font-size: 8px;
+    letter-spacing: 5px;
+}
+
+h1 {
+    margin-top: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(60px, 10vw, 100px);
+    line-height: .8;
+
+    font-weight: 500;
+    font-style: italic;
+}
+
+h1 span {
+    display: block;
+    color: #f2c5d9;
+}
+
+.intro {
+    margin: 30px auto 50px;
+
+    color: #918792;
+    font-size: 13px;
+}
+
+.wheel-area {
+    position: relative;
+
+    width: 330px;
+    height: 330px;
+
+    margin: auto;
+}
+
+.pointer {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    color: #f2c5d9;
+    font-size: 25px;
+
+    filter: drop-shadow(0 0 10px rgba(213,140,174,.7));
+}
+
+.wheel {
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #6f426d 0deg 45deg,
+            #241426 45deg 90deg,
+            #8b5277 90deg 135deg,
+            #241426 135deg 180deg,
+            #6f426d 180deg 225deg,
+            #241426 225deg 270deg,
+            #8b5277 270deg 315deg,
+            #241426 315deg 360deg
+        );
+
+    border: 7px solid rgba(213,140,174,.35);
+
+    box-shadow:
+        0 0 40px rgba(213,140,174,.15),
+        0 30px 80px rgba(0,0,0,.7);
+
+    transition: transform 4s cubic-bezier(.12,.75,.2,1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheel-center {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: #100b12;
+
+    border: 2px solid #d58cae;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f2c5d9;
+    font-size: 30px;
+
+    box-shadow: 0 0 25px rgba(213,140,174,.3);
+}
+
+#spinButton {
+    margin-top: 50px;
+
+    padding: 15px 35px;
+
+    background: transparent;
+    color: #f2c5d9;
+
+    border: 1px solid rgba(213,140,174,.5);
+
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#spinButton:hover {
+    background: #d58cae;
+    color: #09070b;
+
+    box-shadow: 0 0 30px rgba(213,140,174,.3);
+}
+
+#spinButton:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.result {
+    width: min(650px, 100%);
+
+    margin: 45px auto 0;
+    padding: 30px;
+
+    background: rgba(255,255,255,.025);
+
+    border: 1px solid rgba(213,140,174,.2);
+
+    min-height: 130px;
+}
+
+.result span {
+    color: #817785;
+
+    font-size: 7px;
+    letter-spacing: 4px;
+}
+
+.result p {
+    margin-top: 15px;
+
+    color: #f2c5d9;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+
+    header span {
+        display: none;
+    }
+
+    .wheel-area,
+    .wheel {
+        width: 280px;
+        height: 280px;
+    }
+
+    main {
+        padding-top: 50px;
+    }
+}
