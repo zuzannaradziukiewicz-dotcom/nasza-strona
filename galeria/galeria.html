@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wiktor & Zuzia — Gotham Memory Archive</title>
+
+    <link rel="stylesheet" href="galeria.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- DESZCZ -->
+    <div class="rain"></div>
+
+    <!-- BAT-SYGNAL -->
+    <div class="bat-signal">
+        <div class="signal-ring">
+            W + Z
+        </div>
+    </div>
+
+    <!-- NIETOPERZE -->
+    <div class="bats">
+        <span>🦇</span>
+        <span>🦇</span>
+        <span>🦇</span>
+        <span>🦇</span>
+        <span>🦇</span>
+    </div>
+
+
+    <!-- GÓRNY PASEK -->
+    <header class="top-bar">
+
+        <a href="../index.html" class="back-button">
+            ← WRÓĆ
+        </a>
+
+        <div class="top-center">
+
+            <div class="case-number">
+                CASE FILE #WZ-001
+            </div>
+
+            <div class="online">
+                <span></span>
+                ARCHIVE ONLINE
+            </div>
+
+        </div>
+
+        <div class="bat-logo">
+            🦇
+        </div>
+
+    </header>
+
+
+    <!-- GŁÓWNY NAGŁÓWEK -->
+    <section class="hero">
+
+        <div class="classified">
+            PRIVATE // CLASSIFIED
+        </div>
+
+        <h1>
+            WIKTOR <span>×</span> ZUZIA
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <h2>
+            GOTHAM MEMORY ARCHIVE
+        </h2>
+
+        <p>
+            34 wspomnienia.
+            <strong>1 historia.</strong>
+            Nieskończona ilość powodów, żeby Cię kochać. ❤️
+        </p>
+
+        <div class="archive-counter">
+
+            <strong id="photoCount">
+                34
+            </strong>
+
+            <span>
+                MEMORIES FOUND
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALERIA -->
+    <main>
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="tiny-label">
+                    EVIDENCE DATABASE
+                </span>
+
+                <h3>
+                    OUR MEMORIES
+                </h3>
+
+            </div>
+
+            <div class="case-status">
+
+                CASE STATUS:
+                <strong>OPEN</strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- TUTAJ JAVASCRIPT WSTAWI ZDJĘCIA -->
+        <div id="gallery" class="gallery"></div>
+
+    </main>
+
+
+    <!-- POWIĘKSZENIE ZDJĘCIA -->
+    <div id="lightbox" class="lightbox">
+
+        <div class="lightbox-bg"></div>
+
+        <button
+            id="closeLightbox"
+            class="close-button">
+            ×
+        </button>
+
+
+        <button
+            id="prevPhoto"
+            class="lightbox-arrow left">
+            ‹
+        </button>
+
+
+        <div class="lightbox-content">
+
+            <div class="lightbox-top">
+
+                <span id="lightboxNumber">
+                    MEMORY 01 / 34
+                </span>
+
+                <span>
+                    GOTHAM ARCHIVE
+                </span>
+
+            </div>
+
+
+            <div class="image-container">
+
+                <img
+                    id="lightboxImage"
+                    src=""
+                    alt="Wiktor i Zuzia"
+                >
+
+            </div>
+
+
+            <div class="lightbox-bottom">
+
+                <div id="lightboxCaption">
+                    Nasze wspomnienie ❤️
+                </div>
+
+                <div>
+                    WIKTOR × ZUZIA
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="nextPhoto"
+            class="lightbox-arrow right">
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- STOPKA -->
+    <footer>
+
+        <div class="footer-bat">
+            🦇
+        </div>
+
+        <div>
+            WIKTOR & ZUZIA
+        </div>
+
+        <span>
+            PRIVATE GOTHAM MEMORY ARCHIVE
+            // MADE WITH ❤️ BY ZUZIA
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="galeria.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black: #050308;
+    --black2: #0c0810;
+
+    --purple: #9d6bb5;
+    --purple-light: #d8b6e8;
+
+    --pink: #d58cae;
+    --pink-light: #efbfd4;
+
+    --white: #f8f1fa;
+    --gray: #9a909f;
+
+    --border: rgba(213, 140, 174, 0.22);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    color: var(--white);
+
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(130, 75, 160, 0.22),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(110, 45, 90, 0.15),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(90, 55, 130, 0.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #040306,
+            #0d0811 50%,
+            #050308
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   TŁO
+========================================= */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 20%,
+            rgba(210, 160, 230, 0.08),
+            transparent 35%
+        );
+
+    animation: backgroundGlow 7s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundGlow {
+
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   GWIAZDKI
+========================================= */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: 0.35;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.7) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        90px 90px;
+
+    animation:
+        stars 15s linear infinite;
+}
+
+@keyframes stars {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-90px);
+    }
+}
+
+
+/* =========================================
+   SERCA
+========================================= */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.hearts span {
+    position: absolute;
+
+    bottom: -50px;
+
+    color:
+        rgba(221, 151, 186, 0.45);
+
+    font-size: 20px;
+
+    animation:
+        heartFloat 11s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(3) {
+    left: 42%;
+    animation-delay: 7s;
+}
+
+.hearts span:nth-child(4) {
+    left: 63%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(5) {
+    left: 80%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(6) {
+    left: 92%;
+    animation-delay: 9s;
+}
+
+@keyframes heartFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-10deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.25;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(15deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   BAT SIGNAL
+========================================= */
+
+.bat-signal {
+
+    position: fixed;
+
+    top: -180px;
+    left: 50%;
+
+    width: 600px;
+    height: 420px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(215, 160, 235, 0.12),
+            transparent 65%
+        );
+
+    filter: blur(3px);
+}
+
+.bat-symbol {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 75px;
+
+    opacity: 0.15;
+
+    filter:
+        grayscale(1)
+        brightness(1.5)
+        drop-shadow(
+            0 0 25px
+            rgba(210,160,235,0.8)
+        );
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(950px, 92%);
+
+    margin: auto;
+
+    padding:
+        100px 20px 70px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   GÓRNY NAPIS
+========================================= */
+
+.top-label {
+
+    display: inline-block;
+
+    padding:
+        9px 20px;
+
+    border:
+        1px solid
+        rgba(213,140,174,0.3);
+
+    border-radius:
+        50px;
+
+    color:
+        var(--pink-light);
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    box-shadow:
+        0 0 25px
+        rgba(213,140,174,0.08);
+}
+
+
+/* =========================================
+   TYTUŁ
+========================================= */
+
+.hero h1 {
+
+    margin-top: 30px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(60px, 10vw, 115px);
+
+    font-weight: 500;
+
+    line-height: 0.85;
+
+    letter-spacing: -3px;
+
+    color:
+        var(--white);
+
+    text-shadow:
+        0 10px 40px
+        rgba(0,0,0,0.8);
+}
+
+.hero h1 span {
+
+    color:
+        var(--pink);
+
+    font-size:
+        0.55em;
+
+    margin:
+        0 12px;
+
+    text-shadow:
+        0 0 30px
+        rgba(213,140,174,0.7);
+}
+
+
+/* =========================================
+   OZDOBNA LINIA
+========================================= */
+
+.decorative-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin:
+        30px auto;
+}
+
+.decorative-line::before,
+.decorative-line::after {
+
+    content: "";
+
+    width: 100px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--purple)
+        );
+}
+
+.decorative-line::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            transparent
+        );
+}
+
+.decorative-line span {
+
+    color:
+        var(--pink-light);
+
+    font-size: 20px;
+
+    text-shadow:
+        0 0 15px
+        rgba(213,140,174,0.8);
+}
+
+
+/* =========================================
+   PODTYTUŁ
+========================================= */
+
+.hero h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 29px;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color:
+        var(--purple-light);
+}
+
+.intro {
+
+    max-width:
+        550px;
+
+    margin:
+        18px auto 0;
+
+    color:
+        var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   LICZNIK
+========================================= */
+
+.counter-box {
+
+    width:
+        min(650px, 100%);
+
+    margin:
+        45px auto;
+
+    padding:
+        25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.055),
+            rgba(255,255,255,0.015)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        8px;
+
+    box-shadow:
+        0 20px 70px
+        rgba(0,0,0,0.45),
+
+        inset 0 0 40px
+        rgba(210,150,230,0.025);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+.counter-title {
+
+    color:
+        #817887;
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+}
+
+.counter {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 29px;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--white);
+
+    text-shadow:
+        0 0 20px
+        rgba(215,160,235,0.15);
+}
+
+.counter-hearts {
+
+    margin-top: 12px;
+
+    color:
+        var(--pink);
+
+    opacity: 0.6;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PRZYCISKI
+========================================= */
+
+.buttons {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+
+    max-width:
+        850px;
+
+    margin:
+        35px auto;
+}
+
+.main-button {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height:
+        105px;
+
+    padding:
+        20px;
+
+    text-decoration: none;
+
+    color:
+        var(--white);
+
+    text-align:
+        left;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.055),
+            rgba(255,255,255,0.012)
+        );
+
+    border:
+        1px solid
+        rgba(213,140,174,0.2);
+
+    border-radius:
+        8px;
+
+    backdrop-filter:
+        blur(12px);
+
+    transition:
+        0.35s ease;
+}
+
+.main-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent,
+            rgba(213,140,174,0.1),
+            transparent
+        );
+
+    transform:
+        translateX(-120%);
+
+    transition:
+        0.7s ease;
+}
+
+.main-button:hover::before {
+
+    transform:
+        translateX(120%);
+}
+
+.main-button:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(213,140,174,0.6);
+
+    box-shadow:
+        0 20px 55px
+        rgba(0,0,0,0.6),
+
+        0 0 30px
+        rgba(213,140,174,0.12);
+}
+
+
+/* =========================================
+   IKONA
+========================================= */
+
+.button-icon {
+
+    width: 50px;
+
+    font-size: 28px;
+
+    text-align:
+        center;
+
+    transition:
+        0.35s ease;
+}
+
+.main-button:hover
+.button-icon {
+
+    transform:
+        scale(1.15)
+        rotate(-5deg);
+}
+
+
+/* =========================================
+   TEKST PRZYCISKU
+========================================= */
+
+.button-content {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap: 5px;
+
+    flex: 1;
+
+    margin-left:
+        14px;
+}
+
+.button-content strong {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--white);
+}
+
+.button-content small {
+
+    color:
+        #77707e;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        3px;
+}
+
+.button-arrow {
+
+    color:
+        var(--pink-light);
+
+    font-size:
+        26px;
+
+    transition:
+        0.3s ease;
+}
+
+.main-button:hover
+.button-arrow {
+
+    transform:
+        translateX(6px);
+}
+
+
+/* =========================================
+   WIADOMOŚĆ
+========================================= */
+
+.love-message {
+
+    position: relative;
+
+    max-width:
+        700px;
+
+    margin:
+        70px auto 30px;
+
+    padding:
+        42px 30px 35px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border:
+        1px solid
+        rgba(213,140,174,0.16);
+
+    border-radius:
+        8px;
+
+    backdrop-filter:
+        blur(10px);
+}
+
+.message-heart {
+
+    position: absolute;
+
+    top: -25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        #0d0911;
+
+    border:
+        1px solid
+        rgba(213,140,174,0.3);
+
+    color:
+        var(--pink-light);
+
+    font-size:
+        25px;
+
+    box-shadow:
+        0 0 25px
+        rgba(213,140,174,0.1);
+}
+
+.message-label {
+
+    color:
+        #817887;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        5px;
+
+    margin-bottom:
+        18px;
+}
+
+.love-message p {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        29px;
+
+    font-style:
+        italic;
+
+    line-height:
+        1.4;
+
+    color:
+        #eee5f1;
+}
+
+.love-message span {
+
+    display:
+        block;
+
+    margin-top:
+        15px;
+
+    color:
+        var(--pink);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        3px;
+}
+
+
+/* =========================================
+   BATMAN NA DOLE
+========================================= */
+
+.bottom-bat {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        25px;
+
+    margin-top:
+        55px;
+
+    color:
+        rgba(213,140,174,0.35);
+}
+
+.bottom-bat div {
+
+    font-size:
+        28px;
+
+    filter:
+        grayscale(1);
+
+    opacity:
+        0.5;
+}
+
+.bottom-bat span {
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    padding:
+        35px 20px;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid
+        rgba(213,140,174,0.12);
+
+    background:
+        rgba(3,2,6,0.8);
+
+    color:
+        #817887;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        3px;
+}
+
+footer div {
+
+    color:
+        #b7aab9;
+
+    margin-bottom:
+        10px;
+}
+
+footer small {
+
+    color:
+        #5d5662;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        3px;
+}
+
+
+/* =========================================
+   TELEFON
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+
+        padding:
+            75px 12px 60px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            54px;
+
+        letter-spacing:
+            -2px;
+    }
+
+    .hero h1 span {
+
+        margin:
+            0 5px;
+    }
+
+    .hero h2 {
+
+        font-size:
+            24px;
+    }
+
+    .counter {
+
+        font-size:
+            20px;
+    }
+
+    .buttons {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .main-button {
+
+        min-height:
+            92px;
+    }
+
+    .love-message p {
+
+        font-size:
+            24px;
+    }
+
+    .bat-signal {
+
+        width:
+            400px;
+
+        height:
+            300px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .hero {
+
+        padding-top:
+            65px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            45px;
+    }
+
+    .top-label {
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            3px;
+    }
+
+    .hero h2 {
+
+        font-size:
+            21px;
+    }
+
+    .counter {
+
+        font-size:
+            17px;
+    }
+
+    .button-content strong {
+
+        font-size:
+            22px;
+    }
+
+    .love-message {
+
+        padding:
+            40px 20px 30px;
+    }
+}
