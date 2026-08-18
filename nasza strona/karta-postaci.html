@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karta postaci — Wiktor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="karta-postaci.css">
+
+    <!-- Czcionki -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body>
+
+    <!-- TŁO -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="grid-background"></div>
+
+
+    <!-- GÓRNY PASEK -->
+    <header class="top-bar">
+
+        <a href="index.html" class="back-home">
+            ← WRÓĆ DO NASZEGO ŚWIATA
+        </a>
+
+        <div class="game-logo">
+            <span class="logo-dot"></span>
+            WIKTOR DATABASE
+        </div>
+
+        <div class="card-id">
+            CHARACTER ID: #WIK-001
+        </div>
+
+    </header>
+
+
+    <!-- GŁÓWNA KARTA -->
+    <main class="character-card">
+
+
+        <!-- LEWA STRONA -->
+        <section class="character-visual">
+
+            <div class="rarity">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                LEGENDARY CHARACTER
+
+            </div>
+
+
+            <!-- ZDJĘCIE WIKTORA -->
+            <div class="photo-frame">
+
+                <img
+                    src="wiktor.jpg"
+                    alt="Wiktor"
+                    class="character-photo"
+                >
+
+                <div class="photo-overlay"></div>
+
+                <div class="scan-line"></div>
+
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+
+            </div>
+
+
+            <!-- NAZWA POSTACI -->
+            <div class="character-name">
+
+                <div class="small-label">
+                    CHARACTER
+                </div>
+
+                <h1>
+                    WIKTOR
+                </h1>
+
+                <div class="subtitle">
+                    PROFESSIONALNY ŚMIERDZIEL
+                </div>
+
+            </div>
+
+
+            <div class="location">
+                📍 DĘBNO, POLSKA
+            </div>
+
+
+            <div class="visual-status">
+                <span class="status-dot"></span>
+                CHARACTER ONLINE
+            </div>
+
+        </section>
+
+
+
+        <!-- PRAWA STRONA -->
+        <section class="character-info">
+
+
+            <!-- ZAKŁADKI -->
+            <nav class="tabs">
+
+                <button
+                    class="tab active"
+                    data-tab="stats"
+                >
+                    STATYSTYKI
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="skills"
+                >
+                    UMIEJĘTNOŚCI SPECJALNE
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="lore"
+                >
+                    LORE
+                </button>
+
+            </nav>
+
+
+
+            <!-- STATYSTYKI -->
+            <div class="tab-content active" id="stats">
+
+                <div class="section-title">
+                    <span></span>
+                    CHARACTER STATISTICS
+                </div>
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🦨 Śmierdzenie</span>
+                            <strong>101%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>😂 Rozśmieszanie Zuzi</span>
+                            <strong>1 000 000%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🥱 Nudzenie</span>
+                            <strong>−∞%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill negative"
+                                style="--width:3%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🗣️ Gadatliwość</span>
+                            <strong>999 999%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>😍 Przystojność</span>
+                            <strong>MEGA/10</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill love"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>😇 Skromność</span>
+                            <strong>100%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🎤 Głos muzyczny</span>
+                            <strong>SUPERASNY/10</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill"
+                                style="--width:96%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🧠 Głupota</span>
+                            <strong>1 000 000%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>❤️ Troskliwość</span>
+                            <strong>999%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill love"
+                                style="--width:99%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🫂 Przytulanie</span>
+                            <strong>1000%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill love"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>😈 Wkurzanie Zuzi</span>
+                            <strong>873%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill"
+                                style="--width:87%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>💘 Bycie chłopakiem Zuzi</span>
+                            <strong>100/10</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill love"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🚗 Miłość do Opla</span>
+                            <strong>999 999%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🚗 Znikanie z Oplem</span>
+                            <strong>PODEJRZANIE WYSOKA</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill"
+                                style="--width:94%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>👊 Umiejętność bicia</span>
+                            <strong>1 000 000%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🥊 Bicie Zuzi</span>
+                            <strong>−∞%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill negative"
+                                style="--width:2%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🍺 Picie</span>
+                            <strong>DO PEWNEGO MOMENTU: 100%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🤢 Picie po przekroczeniu limitu</span>
+                            <strong>RZYGANIE/10</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill negative"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🌿 Upalenie</span>
+                            <strong>999%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>💨 Pierdzenie w twarz</span>
+                            <strong>999 999%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>👃 Dłubanie w nosie</span>
+                            <strong>PROFESJONALISTA</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-top">
+                            <span>🟢 Produkcja kozy z nosa</span>
+                            <strong>999 999%</strong>
+                        </div>
+
+                        <div class="bar">
+                            <div
+                                class="fill over"
+                                style="--width:100%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- UMIEJĘTNOŚCI SPECJALNE -->
+
+            <div
+                class="tab-content"
+                id="skills"
+            >
+
+                <div class="section-title">
+                    <span></span>
+                    SPECIAL ABILITIES
+                </div>
+
+
+                <div class="skills-list">
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🗣️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                „ZUZIIIU, ZUZIA, ZUZIIIIU”
+                            </h3>
+
+                            <p>
+                                Aktywuje się podczas każdej kłótni,
+                                kiedy Zuzia się wkurzy.
+                            </p>
+
+                            <small>
+                                SKUTECZNOŚĆ: 100%
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🫂
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                „CHOĆ SIĘ PRZYTULISZ?”
+                            </h3>
+
+                            <p>
+                                Próba zakończenia konfliktu
+                                poprzez przytulenie.
+                            </p>
+
+                            <small>
+                                SKUTECZNOŚĆ: 98%
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🗣️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                WIKTOR GADA
+                            </h3>
+
+                            <p>
+                                Monolog trwający od 5 minut do ∞.
+                                Przycisk STOP: niedostępny.
+                            </p>
+
+                            <small>
+                                TRYB: NIEKOŃCZĄCY SIĘ
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            ❤️
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                TROSKLIWY WIKTOREK
+                            </h3>
+
+                            <p>
+                                +1000 do troskliwości.
+                                Aktywuje się, kiedy Zuzi coś jest.
+                            </p>
+
+                            <small>
+                                RANGA: OPIEKUN
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🚗
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                KIEROWCA OPLA
+                            </h3>
+
+                            <p>
+                                Wsiada do samochodu i nagle staje się
+                                profesjonalnym kierowcą.
+                                „Spokojnie, ogarniam.”
+                            </p>
+
+                            <small>
+                                POZIOM: PODEJRZANIE DOBRY
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            💨
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                ATAK POWIETRZNY
+                            </h3>
+
+                            <p>
+                                Pierdnięcie w twarz Zuzi.
+                                Główny cel: Zuzia.
+                            </p>
+
+                            <small>
+                                OBRONA: PRAKTYCZNIE NIEMOŻLIWA
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            👃
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                KOZA
+                            </h3>
+
+                            <p>
+                                Wydłubywanie kozy z nosa.
+                            </p>
+
+                            <small>
+                                POZIOM: MISTRZOWSKI
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            🥊
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                SŁABOUŚ
+                            </h3>
+
+                            <p>
+                                Moc bojowa: 1 000 000%.
+                                Przeciwko Zuzi: −∞%.
+                                Wynik walki: Zuzia wygrywa.
+                            </p>
+
+                            <small>
+                                STATUS: POKONANY
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LORE -->
+
+            <div
+                class="tab-content"
+                id="lore"
+            >
+
+                <div class="section-title">
+                    <span></span>
+                    CHARACTER LORE
+                </div>
+
+
+                <div class="lore-box">
+
+                    <div class="lore-line">
+                        <span>NAME</span>
+                        <strong>Wiktor</strong>
+                    </div>
+
+                    <div class="lore-line">
+                        <span>CLASS</span>
+                        <strong>Professionalny Śmierdziel</strong>
+                    </div>
+
+                    <div class="lore-line">
+                        <span>RARITY</span>
+                        <strong>★★★★★ LEGENDARY</strong>
+                    </div>
+
+                    <div class="lore-line">
+                        <span>HABITAT</span>
+                        <strong>Dębno</strong>
+                    </div>
+
+                    <div class="lore-line">
+                        <span>FAVOURITE OBJECT</span>
+                        <strong>Opel 🚗</strong>
+                    </div>
+
+                    <div class="lore-line">
+                        <span>ULTIMATE</span>
+                        <strong>„ZUZIIIIU”</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="warning-box">
+
+                    <div class="warning-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            OSTRZEŻENIE
+                        </h3>
+
+                        <p>
+                            Postać może powodować śmiech,
+                            wkurwienie, przytulanie, tęsknotę
+                            oraz niekontrolowane zakochanie.
+                        </p>
+
+                        <strong>
+                            UŻYTKOWANIE ZALECANE CODZIENNIE. ❤️
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DOLNY STATUS -->
+
+            <div class="bottom-status">
+
+                <div>
+                    <span class="status-dot"></span>
+                    CHARACTER ONLINE
+                </div>
+
+                <div>
+                    LOVE LEVEL:
+                    <strong>MAXIMUM ❤️</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        WIKTOR DATABASE //
+        PRIVATE CHARACTER FILE //
+        MADE WITH ❤️ BY ZUZIA
+    </footer>
+
+
+
+    <!-- OBSŁUGA ZAKŁADEK -->
+
+    <script>
+
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                const target = tab.dataset.tab;
+
+                tabs.forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                contents.forEach(content => {
+                    content.classList.remove("active");
+                });
+
+                tab.classList.add("active");
+
+                document
+                    .getElementById(target)
+                    .classList.add("active");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

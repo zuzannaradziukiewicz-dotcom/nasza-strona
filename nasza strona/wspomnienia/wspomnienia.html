@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nasze wspomnienia ❤️</title>
+
+    <link rel="stylesheet" href="wspomnienia.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="stars"></div>
+
+
+    <div class="floating-hearts">
+
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+
+    </div>
+
+
+    <header class="top">
+
+        <!-- ../ oznacza: wyjdź z folderu wspomnienia -->
+
+        <a
+            href="../index.html"
+            class="back-button"
+        >
+            ← WRÓĆ DO NAS
+        </a>
+
+
+        <div class="top-title">
+            WIKTOR & ZUZIA
+        </div>
+
+
+        <div class="top-bat">
+            🦇
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <section class="intro">
+
+            <div class="eyebrow">
+                PRIVATE MEMORY ARCHIVE
+            </div>
+
+
+            <h1>
+
+                Nasze
+
+                <span>
+                    wspomnienia
+                </span>
+
+            </h1>
+
+
+            <div class="line"></div>
+
+
+            <p>
+                Nie pamiętam wszystkiego idealnie.
+                Nie pamiętam każdej daty, każdej godziny ani każdego słowa.
+                Ale pamiętam, jak się przy Tobie czułam.
+            </p>
+
+
+            <p>
+                I chyba właśnie dlatego chcę zachować te wszystkie małe rzeczy —
+                nawet te głupie, pijane, chaotyczne i kompletnie pojebane.
+                Bo właśnie z nich składa się nasze „my”. ❤️
+            </p>
+
+        </section>
+
+
+        <section class="memory-counter">
+
+            <span>
+                OUR STORY CONTAINS
+            </span>
+
+
+            <strong id="memoryCount">
+                0
+            </strong>
+
+
+            <small>
+                WSPOMNIEŃ
+            </small>
+
+        </section>
+
+
+        <section
+            class="memories"
+            id="memories"
+        ></section>
+
+
+        <section class="ending">
+
+            <div class="ending-heart">
+                ♥
+            </div>
+
+
+            <h2>
+                To dopiero początek.
+            </h2>
+
+
+            <p>
+                Jestem pewna, że za jakiś czas będziemy dopisywać kolejne.
+                I mam nadzieję, że kiedyś spojrzymy na tę stronę i pomyślimy:
+            </p>
+
+
+            <strong>
+                „Kurwa, ale dużo razem przeżyliśmy.” ❤️
+            </strong>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+
+    <div
+        class="memory-modal"
+        id="memoryModal"
+    >
+
+        <div class="modal-box">
+
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+
+            <div
+                class="modal-number"
+                id="modalNumber"
+            >
+                MEMORY 01
+            </div>
+
+
+            <h2 id="modalTitle">
+                Nasze wspomnienie
+            </h2>
+
+
+            <div class="modal-line"></div>
+
+
+            <p id="modalText"></p>
+
+
+            <div class="modal-footer">
+                WIKTOR & ZUZIA · FOREVER ARCHIVE ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JS jest w TYM SAMYM folderze -->
+
+    <script src="wspomnienia.js"></script>
+
+</body>
+
+</html>

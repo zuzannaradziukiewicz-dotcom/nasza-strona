@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Ile już razem ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+<div class="text">
+
+<h1>Ile już razem? ❤️</h1>
+
+
+<h2>
+Nasza historia zaczęła się 17 kwietnia
+</h2>
+
+
+<div class="counter-box">
+
+<p id="counter">
+Ładowanie...
+</p>
+
+</div>
+
+
+<p>
+Od tego momentu każda chwila jest nasza ❤️
+</p>
+
+
+<a class="button" href="index.html">
+⬅️ Wróć
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+const start = new Date("2026-04-17T22:10:00");
+
+
+function countTime(){
+
+const now = new Date();
+
+const time = now - start;
+
+
+const days = Math.floor(
+time / (1000*60*60*24)
+);
+
+
+const hours = Math.floor(
+(time / (1000*60*60)) % 24
+);
+
+
+const minutes = Math.floor(
+(time / (1000*60)) % 60
+);
+
+
+const seconds = Math.floor(
+(time / 1000) % 60
+);
+
+
+
+document.getElementById("counter").innerHTML =
+`
+${days} dni ❤️ <br>
+${hours} godzin ❤️ <br>
+${minutes} minut ❤️ <br>
+${seconds} sekund
+`;
+
+}
+
+
+setInterval(countTime,1000);
+
+countTime();
+
+
+</script>
+
+
+</body>
+
+</html>
